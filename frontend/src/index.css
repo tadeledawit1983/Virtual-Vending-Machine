@@ -1,9 +1,13 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   text-align: center;
-
 }
 
 a {
@@ -34,7 +38,7 @@ img {
   justify-content: center;
   height: 70px;
   color: #fff;
-  padding: 0 10px;
+  padding: 0 20px;
   margin-bottom: 100px;
 }
 
@@ -55,19 +59,20 @@ img {
 }
 
 .product-logo {
-  max-height: 200px;
-  max-width: 250px;
+  max-height: 300px;
+  min-width: 250px;
 }
 
 .product {
   max-width: 500px;
   min-height: 350px;
   display: flex;
+  gap: 10px;
   flex-direction: column;
   align-items: center;
   border: 1px solid rgb(201, 199, 199);
   border-radius: 5px;
-  box-shadow: 0 6px 18px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 6px 18px 0px rgba(0, 0, 0, 0.75);
   padding: 25px;
   line-height: 2.5em;
   cursor: pointer;
@@ -78,13 +83,13 @@ img {
 }
 
 .product:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .product-btn {
-  background: #333030;
-  width: 100px;
-  padding: 20px 20px;
+  background: green;
+  width: 200px;
+  height: 40px;
   border: none;
   border-radius: 5px;
   color: white;
@@ -93,6 +98,11 @@ img {
   font-weight: bold;
   cursor: pointer;
 }
+
+.product-btn:hover {
+  background-color: rgb(19, 100, 19);
+}
+
 
 .product-description {
   width: 90%;
@@ -152,6 +162,7 @@ input:focus {
 
 .form_title {
   color: green;
+  margin-bottom: 15px;
 }
 
 label {
@@ -171,6 +182,55 @@ label {
   font-size: 20px;
 }
 
+/* =============================*/
+/* login form */
+.login_form {
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #639;
+}
+
+.login_container {
+  border: none;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 0 30px;
+  background-color: #fff;
+  box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.75);
+}
+
+.login_container input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+.login_container>button {
+  background-color: #639;
+  margin: 20px auto;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+}
+
+
+
+
+/* =============================== */
 /* footer styles */
 
 .form-header {

@@ -1,16 +1,9 @@
-.single_item {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .download {
     color: #fff;
     font-size: 18px;
 }
 
-.welcome {
+.thankYou {
     margin: 50px auto;
     color: green;
     font-size: 25px;
@@ -49,6 +42,12 @@ button {
 
 }
 
+.btn {
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    margin: 20px auto;
+}
 
 
 .singleItem_container:hover {

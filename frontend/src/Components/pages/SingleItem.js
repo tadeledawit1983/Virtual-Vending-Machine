@@ -12,13 +12,13 @@ const SingleItem = () => {
                 const data = response.data;
                 const filterSingleItem = data.filter(singleData => singleData._id === id)
                 setSingleItem(filterSingleItem[0])
+
             })
     }, [])
-
     return (
         <div>
             <div className="single_item">
-                <h2 className="welcome">Thank You For Shopping Us!</h2>
+                <h2 className="thankYou">Thank You For Shopping Us!</h2>
                 <div className="singleItem_container">
 
                     <h2 className="product-title">{singleItem.name}</h2>
