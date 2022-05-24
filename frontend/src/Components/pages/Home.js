@@ -11,10 +11,9 @@ const Home = () => {
             .catch(err => console.log(err))
     }, [])
 
-
-
     return (
         <div>
+            <h1 style={{ marginBottom: '40px' }}>WELCOME TO COLACO!</h1>
             <div className="product-container">
                 {items.map(item => ((
                     <div key={item._id} className="product">
@@ -23,7 +22,7 @@ const Home = () => {
                         {/* <p className="product-description"> {item.description}</p> */}
                         <h1 className="product-price">${item.price}</h1>
                         <Link to={`/${item._id}`}><button className="product-btn">Buy</button></Link>
-                        <Link to={`/update/${item._id}`}><button onClick={() => navigate('/login')} className="product-btn">Stock</button></Link>
+                        <Link to={`/update/${item._id}`}><button onClick={() => navigate('/login')} className="product-btn">Update Item</button></Link>
                     </div>
 
                 )))}

@@ -35,6 +35,7 @@ const UpdateDB = () => {
         }))
     }
     console.log(formData);
+
     function submitForm() {
         axios.post(updateItemUrl, {
             name: formData.name,

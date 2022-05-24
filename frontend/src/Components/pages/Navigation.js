@@ -4,8 +4,8 @@ export const Navigation = () => {
     const navigate = useNavigate()
     return (
         <div>
-            <h1>Thank You for shopping us!</h1>
-            <button className="btn" onClick={() => navigate('/')}>continue shopping</button>
+            <h1>Item Seccessfuly Added To Stock!</h1>
+            <button className="btn" onClick={() => navigate('/')}>Back to Home Page</button>
         </div >
     )
 }
