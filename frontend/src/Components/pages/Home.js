@@ -22,7 +22,6 @@ const Home = () => {
                         {/* <p className="product-description"> {item.description}</p> */}
                         <h1 className="product-price">${item.price}</h1>
                         <Link to={`/${item._id}`}><button className="product-btn">Buy</button></Link>
-                        <Link to={`/update/${item._id}`}><button onClick={() => navigate('/login')} className="product-btn">Update Item</button></Link>
                     </div>
 
                 )))}

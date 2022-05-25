@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-const Login = () => {
-    const navigate = useNavigate()
+import { useNavigate, Link } from 'react-router-dom'
+const Signup = () => {
+    const navigate = useNavigate
     const [userField, setUserField] = useState({
         email: '',
         password: '',
@@ -16,30 +16,21 @@ const Login = () => {
             }
         })
     }
-    function handleSubmit(e) {
-        if (userField.email === '') {
-            console.log('Please enter name')
-        }
-        if (userField.password !== userField.confirm_password) {
-            e.preventDefault()
-        } else {
-            navigate('/additem')
-        }
-    }
     return (
         <div>
-            <form className="login_form" onSubmit={handleSubmit}>
+            <form className="login_form" >
                 <div className="login_container">
                     <input type="email" placeholder="email" name="email" value={userField.email} onChange={handleForm} required />
 
                     <input type="password" placeholder="Password" name="password" value={userField.password} onChange={handleForm} required />
 
                     <input type="password" placeholder="Confirm Password" name="confirm_password" value={userField.confirm_password} onChange={handleForm} required />
-                    <button>Login</button>
+                    <button>Sign up</button>
+                    Already have an account?<Link to='/login' style={{ color: 'blue' }}>Login</Link>
                 </div>
             </form>
         </div>
     )
 }
 
-export default Login
+export default Signup

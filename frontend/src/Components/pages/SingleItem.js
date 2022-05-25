@@ -18,6 +18,7 @@ const SingleItem = () => {
     return (
         <div>
             <div className="single_item">
+                <Link to='/' className="home_navigate"><h2>Continue Shopping</h2></Link>
                 <h2 className="thankYou">Thank You For Shopping Us!</h2>
                 <div className="singleItem_container">
 
@@ -28,7 +29,6 @@ const SingleItem = () => {
                     <button>
                         <a className="download" href={`http://localhost:3001/items/${singleItem._id}`} download target="_blank">Download Receipt</a></button>
                 </div>
-                <Link to='/' className="home_navigate"><h2>Continue Shopping</h2></Link>
             </div>
         </div>
     )
