@@ -7,3 +7,5 @@ on this web application on the header (nav bar) there is fore different soda ite
 On the navigation bar from right side there is the admin link that takes to another route that the admin or owner to add or update existing item. To add or update item admin should have to login first. After login the route will take to another page that have two options, one for the update and the other for update items in stock. And admin has an access to see all stock by clicking "Click here to see all stock." link. i am usin axios for http request to get post and update item from stock (mongoDB)
 
 from any route if the user wants to back to home page simply click on the nav bar on "COLACO" (left side) link.
+
+I've used the Firebase for login authentication, so try remembering your e-mail and password.

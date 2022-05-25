@@ -13,6 +13,7 @@ const Products = () => {
 
     return (
         <div>
+            <h2 className="link"><Link to="/newitem" style={{ color: '#4738a7' }}>Add new Item</Link></h2>
             <h1 style={{ marginBottom: '40px' }}>WELCOME TO COLACO!</h1>
             <div className="product-container">
                 {items.map(item => ((

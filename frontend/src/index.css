@@ -176,7 +176,7 @@ label {
 }
 
 .sock-link {
-  color: rgb(71, 56, 167);
+  color: #4738a7;
   font-size: 20px;
 }
 
@@ -281,8 +281,8 @@ label {
 
 /* =========== */
 
-/*Media query  */
-@media screen and (max-width: 940px) {
+/*Media query Responsive website */
+@media screen and (max-width: 1200px) {
   .product-container {
     width: 100%;
     margin: 0 auto;
@@ -292,10 +292,20 @@ label {
 
   }
 
+  .colaco {
+    font-size: 2rem;
+  }
+
   .product-description {
     width: 100%;
   }
 }
+
+.link {
+  margin-top: -50px;
+  margin-bottom: 30px;
+}
+
 
 @media screen and (max-width: 768px) {
   .product-container {
@@ -305,5 +315,14 @@ label {
     grid-template-columns: 1fr;
     margin-bottom: 50px;
 
+  }
+
+  .colaco {
+    font-size: 1.5rem;
+  }
+
+  .add_btn {
+    font-size: 14px;
+    width: 50%;
   }
 }

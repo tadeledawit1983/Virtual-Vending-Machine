@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 const Admin = () => {
     const navigate = useNavigate()
     const addItemUrl = 'http://localhost:3001/items/add'
@@ -35,6 +35,8 @@ const Admin = () => {
         <div className="AddItem">
 
             <form className="form" onSubmit={(event) => event.preventDefault()} action="/data">
+                <h2 className="link"><Link to="/update" style={{ color: '#4738a7' }}>Update item</Link></h2>
+
                 <h1 className="form_title">Add New Item To Stock</h1>
                 <a className="sock-link" target="_blank" href="http://localhost:3001/items/">Click here to see all stock.</a>
                 <div className="form-control">

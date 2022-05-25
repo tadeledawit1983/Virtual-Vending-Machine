@@ -30,4 +30,4 @@ function App() {
 }
 export default App;
 
-//https://www.apni-shop.com/wp-content/uploads/2021/09/Appy-Fizz-Can.jpg // fizz
+//https://www.apni-shop.com/wp-content/uploads/2021/09/Appy-Fizz-Can.jpg
