@@ -19,7 +19,7 @@ const UpdateDB = () => {
             })
     }, [])
     console.log(singleItem)
-    const updateItemUrl = `http://localhost:3001/items/update/${id}`
+    const updateItemUrl = `https://virtual-vending.herokuapp.com/update/${id}`
     const [formData, setFormData] = useState({
         name: '',
         description: '',
@@ -44,63 +44,50 @@ const UpdateDB = () => {
             quantity: formData.quantity,
             product_img: formData.product_img
         }).then(res => console.log(res))
-        navigate('/thanks')
+        navigate('/success')
     }
 
     return (
-        <div className="AddItem">
+        <div className="container">
 
-            <form className="form" onSubmit={(event) => event.preventDefault()} action="/data">
-                <h1 className="form_title">Update Item From Stock</h1>
-                <a className="sock-link" target="_blank" href="http://localhost:3001/items/">Click here to see all stock.</a>
-                <div className="form-control">
-                    <label htmlFor="name">name</label>
+            <h2 className="link"><Link to="/update" style={{ color: '#639' }}>Update item</Link></h2>
+            <button className="stock_btn"><a className="sock-link" target="_blank" href="https://virtual-vending.herokuapp.com/items/">Click here to see all stock.</a></button>
+            <form className="addItem" onSubmit={(event) => event.preventDefault()} action="/data">
+                <div className="form_control">
                     <input type="text" id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder='Product_name' />
-                </div>
-                <div className="form-control">
+                        placeholder='Product Name' />
 
-                    <label htmlFor="description">description</label>
+
                     <input
                         type="text" id="description"
                         name="description"
                         value={formData.description}
                         onChange={handleChange}
                         placeholder='Description' />
-                </div>
-                <div className="form-control">
 
-                    <label htmlFor="price">price</label>
                     <input
                         type="text" id="price"
                         name="price"
                         value={formData.price}
                         onChange={handleChange}
-                        placeholder='price' />
-                </div>
-                <div className="form-control">
+                        placeholder='Price' />
 
-                    <label htmlFor="quantity">quantity</label>
                     <input
                         type="text" id="quantity"
                         name="quantity"
                         value={formData.quantity} onChange={handleChange}
-                        placeholder='quantity' />
-                </div>
-                <div className="form-control">
+                        placeholder='Quantity' />
 
-                    <label htmlFor="product_img">product_img</label>
                     <input
                         type="text" id="product_img"
                         name="product_img"
                         value={formData.product_img} onChange={handleChange}
-                        placeholder='product_img' />
+                        placeholder='Product Image' />
+                    <button onClick={submitForm} className="form-control">UPDATE ITEM</button>
                 </div>
-
-                <button onClick={submitForm} typr="submit" className="form-control">Update Item</button>
             </form>
         </div >
     )

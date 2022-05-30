@@ -6,7 +6,7 @@ const Products = () => {
     const navigate = useNavigate()
     const [items, setItems] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:3001/items/')
+        axios.get('https://virtual-vending.herokuapp.com/items/')
             .then(response => setItems(response.data))
             .catch(err => console.log(err))
     }, [])
@@ -23,7 +23,6 @@ const Products = () => {
                         <h1 className="product-price">${item.price}</h1>
                         <Link to={`/update/${item._id}`}><button onClick={() => navigate('/login')} className="product-btn">Update Item</button></Link>
                     </div>
-
                 )))}
             </div>
         </div>

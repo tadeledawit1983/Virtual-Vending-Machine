@@ -4,7 +4,7 @@ import Home from './Components/pages/Home'
 import Admin from './admin/NewItemAddd'
 import SingleItem from './Components/pages/SingleItem'
 import UpdateDB from './admin/UpdateDB'
-import ThankYouPage from './Components/pages/Navigation'
+import SuccessMessage from './Components/pages/SuccessMessage'
 import Login from './admin/Login'
 import Signup from './admin/Signup'
 import Add_update from './admin/Add_update'
@@ -21,7 +21,7 @@ function App() {
         <Route path="/update/" element={<Products />} />
         <Route path="/update/:id" element={<UpdateDB />} />
         <Route path="/:id" element={<SingleItem />} />
-        <Route path="/thanks" element={<ThankYouPage />} />
+        <Route path="/success" element={<SuccessMessage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>

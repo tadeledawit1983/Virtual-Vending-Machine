@@ -7,7 +7,7 @@ const SingleItem = () => {
     const navigate = useNavigate()
     const [singleItem, setSingleItem] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3001/items/')
+        axios.get('https://virtual-vending.herokuapp.com/items/')
             .then(response => {
                 const data = response.data;
                 const filterSingleItem = data.filter(singleData => singleData._id === id)
@@ -27,7 +27,7 @@ const SingleItem = () => {
                     <p className="product-description"> {singleItem.description}</p>
                     <h1 className="product-price">${singleItem.price}</h1>
                     <button>
-                        <a className="download" href={`http://localhost:3001/items/${singleItem._id}`} download target="_blank">Download Receipt</a></button>
+                        <a className="download" href={`https://virtual-vending.herokuapp.com/items/${singleItem._id}`} download target="_blank">Download Receipt</a></button>
                 </div>
             </div>
         </div>
